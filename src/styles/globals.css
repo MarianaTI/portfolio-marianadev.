@@ -24,7 +24,7 @@ body {
   margin: auto;
   color: var(--neutral);
   background-color: #131313;
-  scrollbar-color: #c0c0c0 white;
+  scrollbar-color: #292929 none;
 }
 
 a {

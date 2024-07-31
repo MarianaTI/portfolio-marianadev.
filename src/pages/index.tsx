@@ -1,15 +1,27 @@
 import {
+  Article,
+  ArticleTitle,
+  CardContainer,
+  CategoryContainer,
+  CharacteristicContainer,
   Circle,
+  Circle2,
   Container,
+  Content,
   Grid,
+  GridAboutMe,
   ImageContainer,
   InfoContent,
+  InfoContentAboutMe,
   Information,
   ToolsContainer,
 } from "@/styles/Home.style";
 import Head from "next/head";
 import React from "react";
 import { tools } from "../../constants";
+import CategoryComponent from "@/components/Category/Category";
+import CardComponent from "@/components/Card/Card";
+import CharacteristicComponent from "@/components/Characteristic/Characteristic";
 
 export default function Home() {
   return (
@@ -39,9 +51,81 @@ export default function Home() {
           <img key={index} src={tool.image}></img>
         ))}
       </ToolsContainer>
-      <div>
-        
-      </div>
+      <GridAboutMe>
+        <ImageContainer>
+          <Circle2 />
+        </ImageContainer>
+        <Information>
+          <InfoContentAboutMe>
+            <h1>About me</h1>
+            <p>
+              Lorem ipsum odor amet, consectetuer adipiscing elit. Justo felis
+              nullam condimentum vulputate sodales. At porttitor nunc curabitur
+              facilisi aenean. Enim integer facilisis taciti auctor, proin ut
+              lacus.
+            </p>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum.
+            </p>
+            <p>
+              Suspendisse ultrices semper phasellus fringilla integer eros mi.
+              Libero neque nibh nostra ad augue. Vehicula rhoncus morbi ut eget
+              tortor. Egestas convallis aliquet conubia aliquet nascetur
+              venenatis torquent praesent.
+            </p>
+          </InfoContentAboutMe>
+        </Information>
+      </GridAboutMe>
+      <Content>
+        <h2>My projects</h2>
+        <CategoryContainer>
+          <CategoryComponent name="All" />
+          <CategoryComponent name="Web design" />
+          <CategoryComponent name="Web development" />
+        </CategoryContainer>
+        <CardContainer>
+          <CardComponent />
+          <CardComponent />
+          <CardComponent />
+          <CardComponent />
+          <CardComponent />
+          <CardComponent />
+          <CardComponent />
+          <CardComponent />
+          <CardComponent />
+        </CardContainer>
+      </Content>
+      <Article>
+        <ArticleTitle>
+          <h3>What I know?</h3>
+          <span>Lorem ipsum odor amet, consectetuer adipiscing elit. </span>
+        </ArticleTitle>
+        <CharacteristicContainer>
+          <CharacteristicComponent
+            label="Characteristics"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua."
+          />
+          <CharacteristicComponent
+            label="Characteristics"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua."
+          />
+          <CharacteristicComponent
+            label="Characteristics"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua."
+          />
+          <CharacteristicComponent
+            label="Characteristics"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua."
+          />
+        </CharacteristicContainer>
+      </Article>
     </Container>
   );
 }
