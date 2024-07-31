@@ -44,23 +44,6 @@ export const ImageContainer = styled.div`
   align-items: center;
 `;
 
-//delete
-export const Circle = styled.div`
-  background: #e5cff7;
-  height: 400px;
-  width: 400px;
-  border-radius: 100%;
-`;
-
-export const Circle2 = styled.div`
-  background: #e5cff7;
-  height: 250px;
-  width: 250px;
-  border-radius: 100%;
-`;
-
-//
-
 export const ToolsContainer = styled.aside`
   width: 100%;
   height: 60px;

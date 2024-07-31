@@ -4,8 +4,6 @@ import {
   CardContainer,
   CategoryContainer,
   CharacteristicContainer,
-  Circle,
-  Circle2,
   Contact,
   ContactMe,
   Container,
@@ -22,7 +20,6 @@ import {
   PhraseContent,
   SocialMedias,
   SocialMediasContainer,
-  Text,
   TextContent,
   ToolsContainer,
 } from "@/styles/Home.style";
@@ -57,7 +54,7 @@ export default function Home() {
           </InfoContent>
         </Information>
         <ImageContainer>
-          <Circle />
+          <img src="/image/profile.png" alt="profile-marianadev"/>
         </ImageContainer>
       </Grid>
       <ToolsContainer>
@@ -67,7 +64,7 @@ export default function Home() {
       </ToolsContainer>
       <GridAboutMe>
         <ImageContainer>
-          <Circle2 />
+          <img src="/image/profile.png" width={350} alt="profile-marianadev-about-me"/>
         </ImageContainer>
         <Information>
           <InfoContentAboutMe>
