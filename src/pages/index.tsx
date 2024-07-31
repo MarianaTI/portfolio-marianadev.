@@ -6,14 +6,24 @@ import {
   CharacteristicContainer,
   Circle,
   Circle2,
+  Contact,
+  ContactMe,
   Container,
   Content,
+  Footer,
+  FooterGrid,
   Grid,
   GridAboutMe,
   ImageContainer,
   InfoContent,
   InfoContentAboutMe,
   Information,
+  Line,
+  PhraseContent,
+  SocialMedias,
+  SocialMediasContainer,
+  Text,
+  TextContent,
   ToolsContainer,
 } from "@/styles/Home.style";
 import Head from "next/head";
@@ -22,6 +32,10 @@ import { tools } from "../../constants";
 import CategoryComponent from "@/components/Category/Category";
 import CardComponent from "@/components/Card/Card";
 import CharacteristicComponent from "@/components/Characteristic/Characteristic";
+import { IoLocationOutline } from "react-icons/io5";
+import { MdOutlineEmail } from "react-icons/md";
+import { FiPhone } from "react-icons/fi";
+import { FaDribbble, FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -126,6 +140,51 @@ export default function Home() {
           />
         </CharacteristicContainer>
       </Article>
+      <PhraseContent>
+        <span>
+          “Lorem ipsum odor amet, consectetuer adipiscing elit. Molestie ligula
+          tellus egestas convallis cras etiam ridiculus.”
+        </span>
+      </PhraseContent>
+      <Footer>
+        <Line></Line>
+        <FooterGrid>
+          <ContactMe>
+            <Contact>
+              <IoLocationOutline size={25} color="#A555EC" />
+              <span>Mérida, Yucatán, México</span>
+            </Contact>
+            <Contact>
+              <MdOutlineEmail size={25} color="#A555EC" />
+              <span>marianatrujillo27@hotmail.com</span>
+            </Contact>
+            <Contact>
+              <FiPhone size={25} color="#A555EC" />
+              <span>(+52) 999 273 7423</span>
+            </Contact>
+          </ContactMe>
+          <SocialMediasContainer>
+            <SocialMedias>
+              <a>
+                <FaDribbble size={25} color="#A555EC" />
+              </a>
+              <a>
+                <FaGithub size={25} color="#A555EC" />
+              </a>
+              <a>
+                <FaLinkedin size={25} color="#A555EC" />
+              </a>
+              <a>
+                <FaFacebookF size={25} color="#A555EC" />
+              </a>
+            </SocialMedias>
+            <TextContent>
+              <span>Contact me!</span>
+              <span>MarianaDev, 2024.</span>
+            </TextContent>
+          </SocialMediasContainer>
+        </FooterGrid>
+      </Footer>
     </Container>
   );
 }

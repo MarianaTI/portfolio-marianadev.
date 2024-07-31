@@ -152,3 +152,96 @@ export const CharacteristicContainer = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 140px;
 `;
+
+export const PhraseContent = styled.div`
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 18% 0;
+  span {
+    width: 90%;
+    font-size: 38px;
+    font-weight: 600;
+    color: rgba(251, 236, 255, 1);
+  }
+`;
+
+export const Footer = styled.footer`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  margin-bottom: 40px;
+`;
+
+export const Line = styled.hr`
+  border: 0;
+  width: 80%;
+  height: 0.1rem;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    #a555ec,
+    transparent
+  );
+`;
+
+export const FooterGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+`;
+
+export const ContactMe = styled.div`
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  p {
+    margin-bottom: 24px;
+  }
+`;
+
+export const Contact = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 24px;
+`;
+
+export const SocialMediasContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+`;
+
+export const SocialMedias = styled.div`
+  display: flex;
+  gap: 32px;
+  a {
+    :hover {
+      box-shadow: 0 4px 15px rgba(90, 90, 90, 0.5);
+    }
+  }
+`;
+
+export const TextContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  span:first-child {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  span:last-child {
+    font-size: 12px;
+    font-weight: 400;
+  }
+`;
