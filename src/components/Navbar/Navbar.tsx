@@ -32,10 +32,10 @@ const Navbar = () => {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12 lg:items-center lg:px-12">
-          <StyledLink href="/home">Home</StyledLink>
-          <StyledLink href="/shop">About me</StyledLink>
-          <StyledLink href="/about">Projects</StyledLink>
-          <StyledLink href="/about">Curriculum</StyledLink>
+          <StyledLink href="#home">Home</StyledLink>
+          <StyledLink href="#aboutme">About me</StyledLink>
+          <StyledLink href="#projects">Projects</StyledLink>
+          <StyledLink href="#footer">Curriculum</StyledLink>
         </div>
       </nav>
       <Dialog
