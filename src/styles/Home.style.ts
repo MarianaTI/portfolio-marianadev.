@@ -57,7 +57,9 @@ export const GridAboutMe = styled(Grid)`
 
 export const InfoContentAboutMe = styled(InfoContent)`
   text-align: right;
-  width: 630px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
   h1 {
     margin: 0;
     font-size: 48px;

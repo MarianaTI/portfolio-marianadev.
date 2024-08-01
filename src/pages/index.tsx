@@ -48,13 +48,14 @@ export default function Home() {
             <span>Hello! 👋 I am Mariana Trujillo</span>
             <h1>FrontEnd Developer UX/UI</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              I love making easy-to-use and nice-looking digital experiences. I
+              mix user-focused design with strong frontend coding skills to
+              create new and useful solutions.
             </p>
           </InfoContent>
         </Information>
         <ImageContainer>
-          <img src="/image/profile.png" alt="profile-marianadev"/>
+          <img src="/image/profile.png" alt="profile-marianadev" />
         </ImageContainer>
       </Grid>
       <ToolsContainer>
@@ -64,28 +65,32 @@ export default function Home() {
       </ToolsContainer>
       <GridAboutMe>
         <ImageContainer>
-          <img src="/image/profile.png" width={350} alt="profile-marianadev-about-me"/>
+          <img
+            src="/image/profile.png"
+            width={350}
+            alt="profile-marianadev-about-me"
+          />
         </ImageContainer>
         <Information>
           <InfoContentAboutMe>
             <h1>About me</h1>
             <p>
-              Lorem ipsum odor amet, consectetuer adipiscing elit. Justo felis
-              nullam condimentum vulputate sodales. At porttitor nunc curabitur
-              facilisi aenean. Enim integer facilisis taciti auctor, proin ut
-              lacus.
+              I am a passionate frontend developer and UX/UI designer who loves
+              creating intuitive and attractive digital experiences. I design in
+              Figma to ensure a user-centered and visually consistent interface.
+              For my projects, I use modern technologies like Next.js,
+              Emotion/styled, JavaScript, Node.js, Express, and Firebase.
             </p>
             <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
+              I combine my creativity in design with strong technical skills to
+              deliver innovative and functional solutions that exceed user
+              expectations. I enjoy turning ideas into reality and always strive
+              to improve user satisfaction through careful design and efficient
+              coding.
             </p>
             <p>
-              Suspendisse ultrices semper phasellus fringilla integer eros mi.
-              Libero neque nibh nostra ad augue. Vehicula rhoncus morbi ut eget
-              tortor. Egestas convallis aliquet conubia aliquet nascetur
-              venenatis torquent praesent.
+              I am responsible and well-organized. I am always excited to learn
+              new things and improve my skills in web development and UI design.
             </p>
           </InfoContentAboutMe>
         </Information>
