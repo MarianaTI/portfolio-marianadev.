@@ -7,8 +7,8 @@ export const Container = styled.div`
   align-items: center;
   text-align: center;
   gap: 16px;
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   background-color: #292929;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(75, 75, 75, 0.25);
@@ -18,7 +18,7 @@ export const Container = styled.div`
     font-weight: 600;
   }
   p {
-    width: 190px;
+    width: 200px;
     font-size: 12px;
     font-weight: 400;
   }

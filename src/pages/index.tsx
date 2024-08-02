@@ -197,21 +197,21 @@ export default function Home() {
           </ContactMe>
           <SocialMediasContainer>
             <SocialMedias>
-              <a>
+              <a href="https://dribbble.com/MarianaTI">
                 <FaDribbble size={25} color="#A555EC" />
               </a>
-              <a>
+              <a href="https://github.com/MarianaTI">
                 <FaGithub size={25} color="#A555EC" />
               </a>
-              <a>
+              <a href="https://www.linkedin.com/in/marianati220503/">
                 <FaLinkedin size={25} color="#A555EC" />
               </a>
-              <a>
+              <a href="https://www.facebook.com/profile.php?id=100055915908542">
                 <FaFacebookF size={25} color="#A555EC" />
               </a>
             </SocialMedias>
             <TextContent>
-              <span>Contact me!</span>
+              <span>Contáctame!</span>
               <span>MarianaDev, 2024.</span>
             </TextContent>
           </SocialMediasContainer>
