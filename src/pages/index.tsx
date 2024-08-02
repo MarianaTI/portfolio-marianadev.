@@ -33,6 +33,9 @@ import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineEmail } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
 import { FaDribbble, FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa";
+import { PiPaletteLight, PiHandshakeLight } from "react-icons/pi";
+import { IoLanguageOutline } from "react-icons/io5";
+import { PiBrainLight } from "react-icons/pi";
 
 export default function Home() {
   return (
@@ -121,22 +124,26 @@ export default function Home() {
         </ArticleTitle>
         <CharacteristicContainer>
           <CharacteristicComponent
-            label="Characteristics"
+          icon={PiPaletteLight}
+            label="Creativity"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua."
           />
           <CharacteristicComponent
-            label="Characteristics"
+          icon={IoLanguageOutline}
+            label="Languages"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua."
           />
           <CharacteristicComponent
-            label="Characteristics"
+          icon={PiHandshakeLight}
+            label="Equipo idk"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua."
           />
           <CharacteristicComponent
-            label="Characteristics"
+          icon={PiBrainLight}
+            label="Un cerebro??"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua."
           />

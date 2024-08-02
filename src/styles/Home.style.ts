@@ -1,3 +1,4 @@
+import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 
 export const Container = styled.div`
@@ -38,10 +39,24 @@ export const InfoContent = styled.div`
   }
 `;
 
+const fadeInScale = keyframes`
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+`;
+
 export const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  img {
+    animation: ${fadeInScale} 2s ease-out;
+  }
 `;
 
 export const ToolsContainer = styled.aside`
