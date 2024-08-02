@@ -5,7 +5,7 @@ interface CardProps {
   title?: string;
   description?: string;
   category?: string;
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
 }
 
 const CardComponent: React.FC<CardProps> = ({
@@ -15,7 +15,7 @@ const CardComponent: React.FC<CardProps> = ({
   onClick,
 }) => {
   return (
-    <Container>
+    <Container onClick={onClick}>
       <img src="/image/Rectangle.png" />
       <h5>{title}</h5>
       <Info>

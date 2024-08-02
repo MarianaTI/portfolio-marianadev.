@@ -36,9 +36,18 @@ import { FaDribbble, FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa";
 import { PiPaletteLight, PiHandshakeLight } from "react-icons/pi";
 import { IoLanguageOutline } from "react-icons/io5";
 import { PiBrainLight } from "react-icons/pi";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState("Todo");
+
+  const navigateToProject = (slug: string) => {
+    return router.push({
+      pathname: "/[id]",
+      query: { id: slug },
+    });
+  };
 
   const filteredProjects =
     selectedCategory === "Todo"
@@ -136,48 +145,50 @@ export default function Home() {
               title={project.title}
               category={project.categoryName}
               description={project.date}
+              onClick={() => navigateToProject(project.slug)}
             />
           ))}
         </CardContainer>
       </Content>
       <Article>
         <ArticleTitle>
-          <h3>What I know?</h3>
-          <span>Lorem ipsum odor amet, consectetuer adipiscing elit. </span>
+          <h3>Más sobre mí...</h3>
+          <span>
+            Descubre algunas de las cualidades y habilidades que definen mi
+            enfoque y pasión en el trabajo y la vida.
+          </span>
         </ArticleTitle>
         <CharacteristicContainer>
           <CharacteristicComponent
             icon={PiPaletteLight}
-            label="Creativity"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua."
+            label="Creatividad"
+            description="Soy una persona altamente creativa, siempre buscando nuevas ideas y soluciones innovadoras en mis proyectos."
           />
           <CharacteristicComponent
             icon={IoLanguageOutline}
-            label="Languages"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua."
+            label="Idiomas"
+            description="Hablo varios idiomas, incluyendo inglés y español, lo que me permite comunicarme efectivamente en un entorno multicultural."
           />
           <CharacteristicComponent
             icon={PiHandshakeLight}
-            label="Equipo idk"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua."
+            label="Trabajo en Equipo"
+            description="Disfruto trabajar en equipo y colaborar con otros para lograr objetivos comunes, siempre dispuesto a aprender y enseñar."
           />
           <CharacteristicComponent
             icon={PiBrainLight}
-            label="Un cerebro??"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua."
+            label="Pensamiento Crítico"
+            description="Poseo un fuerte pensamiento crítico, capaz de analizar problemas complejos y encontrar soluciones eficientes y efectivas."
           />
         </CharacteristicContainer>
       </Article>
       <PhraseContent>
         <span>
-          “Lorem ipsum odor amet, consectetuer adipiscing elit. Molestie ligula
-          tellus egestas convallis cras etiam ridiculus.”
+          “La verdadera creatividad no solo consiste en tener nuevas ideas, sino
+          en tener el coraje de seguirlas. Cada desafío es una oportunidad para
+          explorar, aprender y transformar lo ordinario en algo extraordinario.”
         </span>
       </PhraseContent>
+
       <Footer id="footer">
         <Line></Line>
         <FooterGrid>
