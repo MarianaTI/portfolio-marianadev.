@@ -71,11 +71,11 @@ export const GridAboutMe = styled(Grid)`
 `;
 
 export const InfoContentAboutMe = styled(InfoContent)`
-  text-align: right;
   width: 600px;
   display: flex;
   justify-content: center;
   h1 {
+    text-align: center;
     margin: 0;
     font-size: 48px;
     font-weight: 800;

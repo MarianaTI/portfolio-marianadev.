@@ -24,8 +24,8 @@ import {
   ToolsContainer,
 } from "@/styles/Home.style";
 import Head from "next/head";
-import React from "react";
-import { tools } from "../../constants";
+import React, { useState } from "react";
+import { projects, tools } from "../../constants";
 import CategoryComponent from "@/components/Category/Category";
 import CardComponent from "@/components/Card/Card";
 import CharacteristicComponent from "@/components/Characteristic/Characteristic";
@@ -38,6 +38,15 @@ import { IoLanguageOutline } from "react-icons/io5";
 import { PiBrainLight } from "react-icons/pi";
 
 export default function Home() {
+  const [selectedCategory, setSelectedCategory] = useState("Todo");
+
+  const filteredProjects =
+    selectedCategory === "Todo"
+      ? projects
+      : projects.filter(
+          (project) => project.category === selectedCategory.toLowerCase()
+        );
+
   return (
     <Container>
       <Head>
@@ -48,12 +57,13 @@ export default function Home() {
       <Grid id="home">
         <Information>
           <InfoContent>
-            <span>Hello! 👋 I am Mariana Trujillo</span>
+            <span>Hola! 👋 Soy Mariana Trujillo</span>
             <h1>FrontEnd Developer UX/UI</h1>
             <p>
-              I love making easy-to-use and nice-looking digital experiences. I
-              mix user-focused design with strong frontend coding skills to
-              create new and useful solutions.
+              Me encanta crear experiencias digitales fáciles de usar y
+              atractivas. Combino el diseño centrado en el usuario con sólidas
+              habilidades de programación frontend para crear soluciones nuevas
+              y útiles.
             </p>
           </InfoContent>
         </Information>
@@ -76,45 +86,53 @@ export default function Home() {
         </ImageContainer>
         <Information>
           <InfoContentAboutMe>
-            <h1>About me</h1>
+            <h1>Sobre mí</h1>
             <p>
-              I am a passionate frontend developer and UX/UI designer who loves
-              creating intuitive and attractive digital experiences. I design in
-              Figma to ensure a user-centered and visually consistent interface.
-              For my projects, I use modern technologies like Next.js,
-              Emotion/styled, JavaScript, Node.js, Express, and Firebase.
+              Soy desarrolladora frontend y diseñadora UX/UI apasionada que ama
+              crear experiencias digitales intuitivas y atractivas. Diseño en
+              Figma para asegurar una interfaz centrada en el usuario y
+              visualmente consistente. Para mis proyectos, utilizo tecnologías
+              modernas como Next.js, Emotion/styled, JavaScript, Node.js,
+              Express y Firebase.
             </p>
             <p>
-              I combine my creativity in design with strong technical skills to
-              deliver innovative and functional solutions that exceed user
-              expectations. I enjoy turning ideas into reality and always strive
-              to improve user satisfaction through careful design and efficient
-              coding.
+              Combino mi creatividad en el diseño con sólidas habilidades
+              técnicas para entregar soluciones innovadoras y funcionales que
+              superan las expectativas de los usuarios. Disfruto convertir ideas
+              en realidad y siempre me esfuerzo por mejorar la satisfacción del
+              usuario mediante un diseño cuidadoso y una programación eficiente.
             </p>
             <p>
-              I am responsible and well-organized. I am always excited to learn
-              new things and improve my skills in web development and UI design.
+              Soy responsable y organizada. Siempre estoy emocionada de
+              aprender cosas nuevas y mejorar mis habilidades en el desarrollo
+              web y el diseño de interfaces de usuario.
             </p>
           </InfoContentAboutMe>
         </Information>
       </GridAboutMe>
       <Content id="projects">
-        <h2>My projects</h2>
+        <h2>Mis proyectos</h2>
         <CategoryContainer>
-          <CategoryComponent name="All" />
-          <CategoryComponent name="Web design" />
-          <CategoryComponent name="Web development" />
+          <CategoryComponent
+            name="Todo"
+            onClick={() => setSelectedCategory("Todo")}
+            active={selectedCategory === "Todo"}
+          />
+          <CategoryComponent
+            name="Diseño web"
+            onClick={() => setSelectedCategory("Web design")}
+            active={selectedCategory === "Web design"}
+          />
+          <CategoryComponent
+            name="Desarrollo web"
+            onClick={() => setSelectedCategory("Web development")}
+            active={selectedCategory === "Web development"}
+          />
         </CategoryContainer>
         <CardContainer>
-          <CardComponent />
-          <CardComponent />
-          <CardComponent />
-          <CardComponent />
-          <CardComponent />
-          <CardComponent />
-          <CardComponent />
-          <CardComponent />
-          <CardComponent />
+          {filteredProjects.map((project, index) => (
+            <CardComponent key={index} title={project.title} description={project.description}/>
+          ))}
         </CardContainer>
       </Content>
       <Article>
@@ -124,25 +142,25 @@ export default function Home() {
         </ArticleTitle>
         <CharacteristicContainer>
           <CharacteristicComponent
-          icon={PiPaletteLight}
+            icon={PiPaletteLight}
             label="Creativity"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua."
           />
           <CharacteristicComponent
-          icon={IoLanguageOutline}
+            icon={IoLanguageOutline}
             label="Languages"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua."
           />
           <CharacteristicComponent
-          icon={PiHandshakeLight}
+            icon={PiHandshakeLight}
             label="Equipo idk"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua."
           />
           <CharacteristicComponent
-          icon={PiBrainLight}
+            icon={PiBrainLight}
             label="Un cerebro??"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua."

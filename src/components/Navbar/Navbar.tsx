@@ -33,8 +33,8 @@ const Navbar = () => {
         </div>
         <div className="hidden lg:flex lg:gap-x-12 lg:items-center lg:px-12">
           <StyledLink href="#home">Home</StyledLink>
-          <StyledLink href="#aboutme">About me</StyledLink>
-          <StyledLink href="#projects">Projects</StyledLink>
+          <StyledLink href="#aboutme">Sobre mí</StyledLink>
+          <StyledLink href="#projects">Proyectos</StyledLink>
           <StyledLink href="#footer">Curriculum</StyledLink>
         </div>
       </nav>
@@ -71,13 +71,13 @@ const Navbar = () => {
                   href="/shop"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gradient-custom"
                 >
-                  About me 
+                  Sobre mí
                 </a>
                 <a
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gradient-custom"
                 >
-                  Projects
+                  Proyectos
                 </a>
                 <a
                   href="#"
