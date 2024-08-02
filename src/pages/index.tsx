@@ -103,9 +103,9 @@ export default function Home() {
               usuario mediante un diseño cuidadoso y una programación eficiente.
             </p>
             <p>
-              Soy responsable y organizada. Siempre estoy emocionada de
-              aprender cosas nuevas y mejorar mis habilidades en el desarrollo
-              web y el diseño de interfaces de usuario.
+              Soy responsable y organizada. Siempre estoy emocionada de aprender
+              cosas nuevas y mejorar mis habilidades en el desarrollo web y el
+              diseño de interfaces de usuario.
             </p>
           </InfoContentAboutMe>
         </Information>
@@ -131,7 +131,12 @@ export default function Home() {
         </CategoryContainer>
         <CardContainer>
           {filteredProjects.map((project, index) => (
-            <CardComponent key={index} title={project.title} description={project.description}/>
+            <CardComponent
+              key={index}
+              title={project.title}
+              category={project.categoryName}
+              description={project.date}
+            />
           ))}
         </CardContainer>
       </Content>
