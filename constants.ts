@@ -26,6 +26,8 @@ export const projects = [
     category: "web design",
     categoryName: "Diseño Web",
     date: "Julio, 2024",
+    coverImage: "/image/Plantify.png",
+    image: "/image/PlantifyDesign.png",
   },
   {
     slug: "project-events-web",
@@ -33,6 +35,8 @@ export const projects = [
     category: "web development",
     categoryName: "Desarrollo Web",
     date: "Julio, 2024",
+    coverImage: "/image/Plantify.png",
+    image: "/image/PlantifyDesign.png",
   },
   {
     slug: "mini-projects-online-exam",
@@ -40,6 +44,8 @@ export const projects = [
     category: "web development",
     categoryName: "Desarrollo Web",
     date: "Junio, 2024",
+    coverImage: "/image/Plantify.png",
+    image: "/image/PlantifyDesign.png",
   },
   {
     slug: "blog-web",
@@ -47,6 +53,8 @@ export const projects = [
     category: "web development",
     categoryName: "Desarrollo Web",
     date: "Junio, 2024",
+    coverImage: "/image/Plantify.png",
+    image: "/image/PlantifyDesign.png",
   },
   {
     slug: "ganado-link-web",
@@ -54,6 +62,8 @@ export const projects = [
     category: "web development",
     categoryName: "Desarrollo Web",
     date: "Enero, 2024",
+    coverImage: "/image/Plantify.png",
+    image: "/image/PlantifyDesign.png",
   },
   {
     slug: "ganado-link-design",
@@ -61,6 +71,8 @@ export const projects = [
     category: "web design",
     categoryName: "Diseño Web",
     date: "Enero, 2024",
+    coverImage: "/image/Plantify.png",
+    image: "/image/PlantifyDesign.png",
   },
   {
     slug: "ebook-cloud-design",
@@ -68,6 +80,8 @@ export const projects = [
     category: "web design",
     categoryName: "Diseño Web",
     date: "Agosto, 2023",
+    coverImage: "/image/Plantify.png",
+    image: "/image/PlantifyDesign.png",
   },
   {
     slug: "ebook-cloud-web",
@@ -75,6 +89,8 @@ export const projects = [
     category: "web development",
     categoryName: "Desarrollo Web",
     date: "Agosto, 2023",
+    coverImage: "/image/Plantify.png",
+    image: "/image/PlantifyDesign.png",
   },
   {
     slug: "maestro-enarm-web",
@@ -82,6 +98,8 @@ export const projects = [
     category: "web development",
     categoryName: "Desarrollo Web",
     date: "Mayo, 2023",
+    coverImage: "/image/Plantify.png",
+    image: "/image/PlantifyDesign.png",
   },
   {
     slug: "maestro-enarm-design",
@@ -89,6 +107,8 @@ export const projects = [
     category: "web design",
     categoryName: "Diseño Web",
     date: "Mayo, 2023",
+    coverImage: "/image/Plantify.png",
+    image: "/image/PlantifyDesign.png",
   },
   {
     slug: "solema-design",
@@ -96,6 +116,8 @@ export const projects = [
     category: "web design",
     categoryName: "Diseño Web",
     date: "Marzo, 2023",
+    coverImage: "/image/Plantify.png",
+    image: "/image/PlantifyDesign.png",
   },
   {
     slug: "quick2go-design",
@@ -103,6 +125,8 @@ export const projects = [
     category: "web design",
     categoryName: "Diseño Web",
     date: "Enero, 2023",
+    coverImage: "/image/Plantify.png",
+    image: "/image/PlantifyDesign.png",
   },
   {
     slug: "quick2go-web",
@@ -110,5 +134,7 @@ export const projects = [
     category: "web development",
     categoryName: "Desarrollo Web",
     date: "Enero, 2023",
+    coverImage: "/image/Plantify.png",
+    image: "/image/PlantifyDesign.png",
   },
 ];

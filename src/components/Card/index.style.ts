@@ -9,6 +9,10 @@ export const Container = styled.div`
   padding: 10px;
   cursor: pointer;
   transition: background 0.5s ease, transform 0.5s ease;
+  img{
+    object-fit: cover;
+    border-radius: 10px;
+  }
   h5 {
     margin: 0;
     font-size: 20px;

@@ -37,16 +37,24 @@ import { PiPaletteLight, PiHandshakeLight } from "react-icons/pi";
 import { IoLanguageOutline } from "react-icons/io5";
 import { PiBrainLight } from "react-icons/pi";
 import { useRouter } from "next/router";
+import Lightbox from "@/components/Lightbox/Lightbox";
 
-export default function Home() {
+const Home: React.FC = () => {
   const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState("Todo");
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [lightboxProject, setLightboxProject] = useState<any>(null);
 
   const navigateToProject = (slug: string) => {
     return router.push({
       pathname: "/[id]",
       query: { id: slug },
     });
+  };
+
+  const openLightbox = (project: any) => {
+    setLightboxProject(project);
+    setIsLightboxOpen(true);
   };
 
   const filteredProjects =
@@ -145,11 +153,21 @@ export default function Home() {
               title={project.title}
               category={project.categoryName}
               description={project.date}
-              onClick={() => navigateToProject(project.slug)}
+              coverImage={project.coverImage}
+              onClick={() => openLightbox(project)}
             />
           ))}
         </CardContainer>
       </Content>
+      {lightboxProject && (
+        <Lightbox
+          isOpen={isLightboxOpen}
+          handleClose={() => setIsLightboxOpen(false)}
+          title={lightboxProject.title}
+          category={lightboxProject.categoryName}
+          image={lightboxProject.image}
+        ></Lightbox>
+      )}
       <Article>
         <ArticleTitle>
           <h3>Más sobre mí...</h3>
@@ -230,4 +248,6 @@ export default function Home() {
       </Footer>
     </Container>
   );
-}
+};
+
+export default Home;
