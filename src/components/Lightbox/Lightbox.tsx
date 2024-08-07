@@ -14,7 +14,7 @@ interface LightboxProps {
 export const ModalContent = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 40px 8%;
+  padding: 40px 10%;
   max-height: 100vh;
   width: 100vw;
   gap: 28px;
@@ -55,7 +55,7 @@ export const ModalMain = styled.div`
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   img {
   }
 `;
@@ -80,7 +80,7 @@ const Lightbox: React.FC<LightboxProps> = ({
           </IconButton>
         </Header>
         <ModalMain>
-          <img src={image} alt={title}/>
+          <img src={image} alt={title} />
         </ModalMain>
       </ModalContent>
     </Modal>
