@@ -51,7 +51,7 @@ export const InfoContent = styled.div`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     @media (max-width: 400px) {
-      font-size: 40px;
+      font-size: 33px;
     }
   }
   p {
@@ -63,6 +63,7 @@ export const InfoContent = styled.div`
   }
   @media (max-width: 400px) {
     width: auto;
+    gap: 14px;
   }
 `;
 

@@ -67,7 +67,10 @@ const Home: React.FC = () => {
         <Information>
           <InfoContent>
             <span>Hola! 👋 Soy Mariana Trujillo</span>
-            <h1>FrontEnd Developer UX/UI</h1>
+            <div>
+              <h1>FrontEnd Developer</h1>
+              <h1>UX/UI</h1>
+            </div>
             <p>
               Me encanta crear experiencias digitales fáciles de usar y
               atractivas. Combino el diseño centrado en el usuario con sólidas
