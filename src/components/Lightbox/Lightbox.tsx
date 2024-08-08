@@ -20,6 +20,12 @@ export const ModalContent = styled.div`
   gap: 28px;
   position: relative;
   overflow: auto;
+  @media (max-width: 800px) {
+    padding: 40px 5%;
+  }
+  @media (max-width: 400px) {
+    padding: 15px 2%;
+  }
 `;
 
 export const Header = styled.div`

@@ -3,17 +3,32 @@ import styled from "@emotion/styled";
 
 export const Container = styled.div`
   margin: 16px 100px;
+  @media (max-width: 800px) {
+    margin: 0 50px;
+  }
+  @media (max-width: 400px) {
+    margin: 0 25px;
+  }
 `;
 
 export const Grid = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 750px;
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
 `;
 
 export const Information = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: 800px) {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const InfoContent = styled.div`
@@ -24,6 +39,9 @@ export const InfoContent = styled.div`
   span {
     font-size: 24px;
     font-weight: 600;
+    @media (max-width: 400px) {
+      font-size: 20px;
+    }
   }
   h1 {
     margin: 0;
@@ -32,10 +50,19 @@ export const InfoContent = styled.div`
     background: linear-gradient(90deg, #a555ec 0%, #f3ccff 69%, #ffffff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @media (max-width: 400px) {
+      font-size: 40px;
+    }
   }
   p {
     font-size: 16px;
     font-weight: 500;
+  }
+  @media (max-width: 800px) {
+    margin-left: 0;
+  }
+  @media (max-width: 400px) {
+    width: auto;
   }
 `;
 
@@ -57,6 +84,9 @@ export const ImageContainer = styled.div`
   img {
     animation: ${fadeInScale} 2s ease-out;
   }
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 
 export const ToolsContainer = styled.aside`
@@ -64,6 +94,9 @@ export const ToolsContainer = styled.aside`
   height: 60px;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 
 export const GridAboutMe = styled(Grid)`
@@ -82,6 +115,9 @@ export const InfoContentAboutMe = styled(InfoContent)`
     background: linear-gradient(90deg, #a555ec 20%, #f3ccff 90%, #ffffff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @media (max-width: 400px) {
+      font-size: 40px;
+    }
   }
 `;
 
@@ -97,12 +133,22 @@ export const Content = styled.section`
     background: linear-gradient(90deg, #a555ec 0%, #f3ccff 15%, #ffffff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @media (max-width: 400px) {
+      font-size: 40px;
+    }
+  }
+  @media (max-width: 800px) {
+    justify-content: center;
+    align-items: center;
   }
 `;
 
 export const CategoryContainer = styled.div`
   display: flex;
   gap: 56px;
+  @media (max-width: 800px) {
+    gap: 16px;
+  }
 `;
 
 export const CardContainer = styled.div`
@@ -118,7 +164,7 @@ export const CardContainer = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media (max-width: 320px) {
+  @media (max-width: 400px) {
     justify-content: center;
     margin-top: 32px;
     grid-template-columns: 1fr;
@@ -140,6 +186,9 @@ export const ArticleTitle = styled.div`
     margin: 0;
     font-size: 40px;
     font-weight: 700;
+    @media (max-width: 400px) {
+      font-size: 36px;
+    }
   }
   span {
     font-size: 14px;
@@ -150,7 +199,18 @@ export const ArticleTitle = styled.div`
 export const CharacteristicContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 140px;
+  grid-gap: 100px;
+  @media (max-width: 1600px) {
+    grid-gap: 30px;
+  }
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+  }
+  @media (max-width: 400px) {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
 `;
 
 export const PhraseContent = styled.div`
@@ -164,6 +224,12 @@ export const PhraseContent = styled.div`
     font-size: 38px;
     font-weight: 600;
     color: rgba(251, 236, 255, 1);
+    @media (max-width: 800px) {
+      font-size: 26px;
+    }
+    @media (max-width: 400px) {
+      font-size: 20px;
+    }
   }
 `;
 
@@ -192,6 +258,13 @@ export const FooterGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 40px;
+  @media (max-width: 800px) {
+    grid-gap: 0px;
+  }
+  @media (max-width: 400px) {
+    grid-template-columns: 1fr;
+    grid-gap: 0px;
+  }
 `;
 
 export const ContactMe = styled.div`
@@ -207,6 +280,9 @@ export const ContactMe = styled.div`
   p {
     margin-bottom: 24px;
   }
+  @media (max-width: 400px) {
+    width: auto;
+  }
 `;
 
 export const Contact = styled.div`
@@ -220,6 +296,9 @@ export const SocialMediasContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: end;
+  @media (max-width: 400px) {
+    display: none;
+  }
 `;
 
 export const SocialMedias = styled.div`
@@ -244,4 +323,11 @@ export const TextContent = styled.div`
     font-size: 12px;
     font-weight: 400;
   }
+`;
+
+export const EmptyState = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 365px;
 `;

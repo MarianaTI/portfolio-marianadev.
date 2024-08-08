@@ -35,7 +35,7 @@ const Navbar = () => {
           <StyledLink href="#home">Home</StyledLink>
           <StyledLink href="#aboutme">Sobre mí</StyledLink>
           <StyledLink href="#projects">Proyectos</StyledLink>
-          <StyledLink href="#footer">Curriculum</StyledLink>
+          <StyledLink>Curriculum</StyledLink>
         </div>
       </nav>
       <Dialog
@@ -62,25 +62,24 @@ const Navbar = () => {
             <div className="-my-6 divide-y divide-white">
               <div className="space-y-2 py-6">
                 <a
-                  href="/home"
+                  href="#home"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gradient-custom"
                 >
                   Home
                 </a>
                 <a
-                  href="/shop"
+                  href="#aboutme"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gradient-custom"
                 >
                   Sobre mí
                 </a>
                 <a
-                  href="#"
+                  href="#projects"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gradient-custom"
                 >
                   Proyectos
                 </a>
                 <a
-                  href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gradient-custom"
                 >
                   Curriculum

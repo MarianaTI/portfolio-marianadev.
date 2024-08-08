@@ -21,6 +21,18 @@ export const Container = styled.div`
     width: 200px;
     font-size: 12px;
     font-weight: 400;
+    @media (max-width: 400px) {
+    width: 180px;
+  }
+  }
+  @media (max-width: 800px) {
+    width: 250px;
+    height: 250px;
+    gap: 8px;
+  }
+  @media (max-width: 400px) {
+    width: 235px;
+    height: 235px;
   }
 `;
 

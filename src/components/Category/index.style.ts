@@ -8,8 +8,11 @@ export const ButtonStyled = styled.button<{ active: boolean }>`
   padding: 4px 16px;
   border-radius: 15px;
   transition: background-color 0.9s ease;
-  background-color: ${({ active }) => (active ? '#a555ec' : 'transparent')};  
+  background-color: ${({ active }) => (active ? "#a555ec" : "transparent")};
   :hover {
     background-color: #a555ec;
+  }
+  @media (max-width: 400px) {
+    font-size: 12px;
   }
 `;

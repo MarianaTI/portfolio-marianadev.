@@ -8,6 +8,7 @@ import {
   ContactMe,
   Container,
   Content,
+  EmptyState,
   Footer,
   FooterGrid,
   Grid,
@@ -36,21 +37,12 @@ import { FaDribbble, FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa";
 import { PiPaletteLight, PiHandshakeLight } from "react-icons/pi";
 import { IoLanguageOutline } from "react-icons/io5";
 import { PiBrainLight } from "react-icons/pi";
-import { useRouter } from "next/router";
 import Lightbox from "@/components/Lightbox/Lightbox";
 
 const Home: React.FC = () => {
-  const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState("Todo");
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [lightboxProject, setLightboxProject] = useState<any>(null);
-
-  const navigateToProject = (slug: string) => {
-    return router.push({
-      pathname: "/[id]",
-      query: { id: slug },
-    });
-  };
 
   const openLightbox = (project: any) => {
     setLightboxProject(project);
@@ -146,18 +138,24 @@ const Home: React.FC = () => {
             active={selectedCategory === "Web development"}
           />
         </CategoryContainer>
-        <CardContainer>
-          {filteredProjects.map((project, index) => (
-            <CardComponent
-              key={index}
-              title={project.title}
-              category={project.categoryName}
-              description={project.date}
-              coverImage={project.coverImage}
-              onClick={() => openLightbox(project)}
-            />
-          ))}
-        </CardContainer>
+        {filteredProjects.length === 0 ? (
+          <EmptyState>
+            <span>Se integrarán nuevos proyectos prontos...</span>
+          </EmptyState>
+        ) : (
+          <CardContainer>
+            {filteredProjects.map((project, index) => (
+              <CardComponent
+                key={index}
+                title={project.title}
+                category={project.categoryName}
+                description={project.date}
+                coverImage={project.coverImage}
+                onClick={() => openLightbox(project)}
+              />
+            ))}
+          </CardContainer>
+        )}
       </Content>
       {lightboxProject && (
         <Lightbox
@@ -206,7 +204,6 @@ const Home: React.FC = () => {
           explorar, aprender y transformar lo ordinario en algo extraordinario.”
         </span>
       </PhraseContent>
-
       <Footer id="footer">
         <Line></Line>
         <FooterGrid>
