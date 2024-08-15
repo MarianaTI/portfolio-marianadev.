@@ -167,6 +167,8 @@ const Home: React.FC = () => {
           title={lightboxProject.title}
           category={lightboxProject.categoryName}
           image={lightboxProject.image}
+          githubWeb={lightboxProject.githubWeb}
+          githubApi={lightboxProject.githubApi}
         ></Lightbox>
       )}
       <Article>
