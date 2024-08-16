@@ -61,6 +61,15 @@ export const IconButton = styled.button`
   }
 `;
 
+export const IconButtonResponsive = styled.button`
+  display: none;
+  @media (max-width: 800px) {
+    display: flex;
+    justify-content: end;
+    font-size: 26px;
+  }
+`;
+
 export const GitHubButton = styled(IconButton)`
   background-color: #fff;
   width: 42px;
@@ -76,7 +85,7 @@ export const GitHubButton = styled(IconButton)`
   }
   @media (max-width: 400px) {
     width: 32px;
-    height:32px;
+    height: 32px;
   }
 `;
 
@@ -140,6 +149,9 @@ const Lightbox: React.FC<LightboxProps> = ({
   return (
     <Modal open={isOpen} onClose={handleClose}>
       <ModalContent>
+        <IconButtonResponsive aria-label="close" onClick={handleClose}>
+          <IoIosClose />
+        </IconButtonResponsive>
         <Header>
           <Info>
             <h1>{title}</h1>
