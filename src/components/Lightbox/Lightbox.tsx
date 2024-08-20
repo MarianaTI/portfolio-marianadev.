@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "@emotion/styled";
 import { Modal } from "@mui/material";
 import { IoIosClose } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
+import ClipLoader from "react-spinners/ClipLoader";
 
 interface LightboxProps {
   isOpen: boolean;
@@ -116,7 +117,9 @@ export const IconContent = styled.div`
   span {
     font-size: 11px;
     font-weight: 700;
-    color: #5f5f5f;
+    background: linear-gradient(90deg, #9720ff 0%, #e58fff 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 `;
 
@@ -146,6 +149,8 @@ const Lightbox: React.FC<LightboxProps> = ({
   githubWeb,
   githubApi,
 }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <Modal open={isOpen} onClose={handleClose}>
       <ModalContent>
@@ -182,7 +187,14 @@ const Lightbox: React.FC<LightboxProps> = ({
           </IconButton>
         </Header>
         <ModalMain>
-          <img src={image} alt={title} />
+          {isLoading && <ClipLoader color={"#5c2092"} />}
+          <img
+            src={image}
+            alt={title}
+            style={{ display: isLoading ? "none" : "block" }}
+            onLoad={() => setIsLoading(false)}
+            onError={() => setIsLoading(false)}
+          />
           {(githubWeb || githubApi) && (
             <IconContainer>
               <IconContent>

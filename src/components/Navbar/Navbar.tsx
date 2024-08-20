@@ -1,24 +1,21 @@
 import React from "react";
 import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
-import {
-  Bars3Icon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { StyledLink } from "./index.style";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header> 
+    <header>
       <nav
         aria-label="Global"
         className="mx-auto flex  items-center justify-between p-3 lg:px-12 bg-transparen"
       >
         <div className="flex flex-1 lg:px-6 ">
           <a href="#" className="text-lg font-semibold">
-           MarianaDev.
+            MarianaDev.
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -35,7 +32,9 @@ const Navbar = () => {
           <StyledLink href="#home">Home</StyledLink>
           <StyledLink href="#aboutme">Sobre mí</StyledLink>
           <StyledLink href="#projects">Proyectos</StyledLink>
-          <StyledLink>Curriculum</StyledLink>
+          <StyledLink href="/CV Mariana Trujillo.pdf" target="_blank">
+            Curriculum
+          </StyledLink>
         </div>
       </nav>
       <Dialog
@@ -44,7 +43,10 @@ const Navbar = () => {
         className="lg:hidden"
       >
         <div className="fixed inset-0 z-10" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10" style={{ backgroundColor: '#292929' }}>
+        <DialogPanel
+          className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+          style={{ backgroundColor: "#292929" }}
+        >
           <div className="flex items-center justify-between">
             <a href="#" className="text-lg font-semibold">
               ManrianaDev.
@@ -80,6 +82,8 @@ const Navbar = () => {
                   Proyectos
                 </a>
                 <a
+                  href="/CV Mariana Trujillo.pdf"
+                  target="_blank"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gradient-custom"
                 >
                   Curriculum
